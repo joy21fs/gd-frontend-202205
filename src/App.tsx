@@ -39,7 +39,7 @@ function App() {
             {users
               .filter((user) => new RegExp(filter, "i").test(user.name))
               .map((user) => (
-                <li key={user.type}>
+                <li key={user._id}>
                   <a
                     className="link--username"
                     href="#"
