@@ -35,7 +35,7 @@ Please send me a PR after you resolve them. -->
   - make "no posts" & posts with click align by moving the <p>No posts.</p> to <li>and move into <ul>
 
 - Fix bugs
-  - change the keys for <li> to {user_id} to make them unique
+  - change the keys for the list-items to {user_id} to make them unique
   - maintain single source of truth for the value of the input
   - make the posts return to initial value at filter instead of remaining its previous state which might show irrelevant posts
 
