@@ -1,11 +1,10 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { User } from "./libs/user";
 import { Post } from "./libs/post";
 import { getUserList, getPostListById } from "./libs/api";
 import "./App.css";
 
 function App() {
-  const inputRef = useRef<HTMLInputElement>(null);
   const [filter, setFilter] = useState("");
   const [currentUser, setCurrentUser] = useState<string>();
   const [users, setUsers] = useState<User[]>([]);
@@ -28,11 +27,12 @@ function App() {
         <section>
           <h2>Users</h2>
           <input
-            ref={inputRef}
+            value={filter}
             type="text"
             placeholder="filter"
-            onChange={() => {
-              if (inputRef.current) setFilter(inputRef.current.value);
+            onChange={(event) => {
+              setFilter(event.target.value);
+              setPosts([]);
             }}
           />
           <ul>
@@ -58,15 +58,14 @@ function App() {
         </section>
         <section>
           <h2>Posts</h2>
-          {posts.length === 0 ? (
-            <p>No posts</p>
-          ) : (
-            <ul>
-              {posts.map((post) => (
-                <li key={post._id}>{post.content}</li>
-              ))}
-            </ul>
-          )}
+
+          <ul>
+            {posts.length === 0 ? (
+              <li>No posts</li>
+            ) : (
+              posts.map((post) => <li key={post._id}>{post.content}</li>)
+            )}
+          </ul>
         </section>
       </div>
     </div>
