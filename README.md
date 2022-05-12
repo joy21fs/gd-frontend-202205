@@ -15,13 +15,10 @@ Please send me a PR after you resolve them. -->
 - RegEx
   - test() Tests for a match in a string. It returns true or false.
   - new RegExp(filter, "i"): the second parameter "i" here is a flag meaning to conduct case-insensitive search
-    To include a flag with the regular expression, use this syntax:
-
-const re = /pattern/flags;
-Copy to Clipboard
-or
-
-const re = new RegExp('pattern', 'flags')
+    To include a flag with the regular expression, use this syntax: 
+    const re = /pattern/flags;
+    or
+    const re = new RegExp('pattern', 'flags')
 
 - HTML entities
   &nbsp; meaning non-breaking space
