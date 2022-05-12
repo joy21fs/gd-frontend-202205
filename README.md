@@ -11,7 +11,7 @@ Please send me a PR after you resolve them. -->
 - CSS
   - using percentages units for widths to make an element's size fixed even at hover
 - Conventional Commits:
-  resource: https://www.conventionalcommits.org/en/v1.0.0/#summary
+  resource-- https://www.conventionalcommits.org/en/v1.0.0/#summary
 - RegEx
   - test() Tests for a match in a string. It returns true or false.
   - new RegExp(filter, "i"): the second parameter "i" here is a flag meaning to conduct case-insensitive search
@@ -24,7 +24,7 @@ Please send me a PR after you resolve them. -->
   &nbsp; meaning non-breaking space
 
 - UseRef hook and its usage
-  - we want to avoid setting input value with inputRef.current.value=”...” or using appendChild, removeChild, etc.) in a component instead of having React do that for you. This leads to inconsistencies between the actual DOM and the React virtual DOM which is very bad.
+  - we want to avoid setting input value with inputRef.current.value=”...” or using appendChild, removeChild, etc.) in a component instead of having React do that for us. This leads to inconsistencies between the actual DOM and the React virtual DOM which is very bad.
 - Still learning: useMemo vs. useCallback
 
 ## My Process
@@ -32,7 +32,7 @@ Please send me a PR after you resolve them. -->
 - Work on the layouts
 
   - make user list-items stand out out by increasing font-weight at hover
-  - make "no posts" & posts with click align by moving the <p>No posts.</p> to <li>and move into <ul>
+  - make "no posts" & posts with click align by moving the <p>No posts.</p> to list-items wrapped inside the unordered list
 
 - Fix bugs
   - change the keys for the list-items to {user_id} to make them unique
